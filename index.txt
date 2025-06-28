@@ -3,22 +3,22 @@ vCard - Personal Portfolio
 # sidebar
 
 alt = Richard hanrick
-Richard hanrick
+Prabhat Bhagel
 Web developer
 
 Show Contacts
 
 Email
-richard@example.com
+prabhatbhagel@outlook.com
 
 Phone
 +1 (213) 352-2795
 
 Birthday
-June 23, 1982
+March 13, 1998
 
 Location
-Sacramento, California, USA
+Gurugram, Haryana, India - 122001
 
 # navbar
 
