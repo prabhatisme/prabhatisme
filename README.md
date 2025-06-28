@@ -1,2 +1,16 @@
+# Personal portfolio
 
-[![roadmap.sh](https://roadmap.sh/card/wide/64c9ee30c3203c8793244f6d?variant=dark)](https://roadmap.sh)
+Hi, this is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+
+## Demo
+
+![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
+![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+
+
+## Contact
+
+If you want to contact me you can reach me at [Email](mailto:prabhatbhagel@outlook.com).
+
+## License
+MIT
