@@ -32,20 +32,21 @@
 
 .tool-badge {
   background: var(--bg-gradient-onyx, #232526);
-  color: var(--orange-yellow-crayola, #FFD86B);
+  color: var(--orange-yellow-crayola, #050505);
   border-radius: 8px;
   padding: 6px 14px;
   font-size: 12px;
   font-weight: 400;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border: 1px solid var(--jet, #333);
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
   cursor: default;
   letter-spacing: 0.5px;
 }
 .tool-badge:hover {
   background: var(--orange-yellow-crayola, #FFD86B);
   color: var(--smoky-black, #222);
+  transform: scale(1.1) rotate(-3deg);
 }
 /*-----------------------------------*\
   #style.css
@@ -328,7 +329,7 @@ article.active {
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 1;
 }
 
@@ -772,17 +773,17 @@ main {
 
 
 /**
- * #clients 
+ * #certifications 
  */
 
-.clients { margin-bottom: 15px; }
+.certifications { margin-top: 30px; margin-bottom:15px; }
 
-.clients-list {
+.certifications-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
-  margin: 0 -15px;
+  margin: 20 -15px;
   padding: 25px;
   padding-bottom: 25px;
   overflow-x: auto;
@@ -792,18 +793,27 @@ main {
   scroll-padding-inline: 25px;
 }
 
-.clients-item {
+.certifications-item {
   min-width: 50%;
   scroll-snap-align: start;
 }
 
-.clients-item img {
+.certifications-item img {
   width: 100%;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
 
-.clients-item img:hover { filter: grayscale(0); }
+.certifications-item img:hover { filter: grayscale(0); }
+
+.cert-title {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+  color:#ffffffd9;
+  font-weight: 400;
+}
 
 
 
@@ -848,6 +858,7 @@ main {
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
   line-height: 1.6;
+  margin-top: 5px;
 }
 
 .timeline-item:not(:last-child)::before {
@@ -1288,7 +1299,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * client
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .certifications-item { min-width: calc(33.33% - 10px); }
 
 
 
@@ -1520,16 +1531,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  /* clients */
+  /* certifications */
 
-  .clients-list {
-    gap: 50px;
-    margin: 0 -30px;
-    padding: 45px;
+  .certifications-list {
+    gap: 40px;
+    margin: 0 -20px;
+    padding: 30px;
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .certifications-item { min-width: calc(33.33% - 35px); }
 
 
 
@@ -1537,7 +1548,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #RESUME
    */
 
-  .timeline-list { margin-left: 65px; }
+  .timeline-list { margin-left: 59px; }
 
   .timeline-item:not(:last-child)::before { left: -40px; }
 
@@ -1783,9 +1794,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
+  /* certifications */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .certifications-item { min-width: calc(40% - 40px); }
 
 
 
@@ -1929,3 +1940,108 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* --- Smooth Transitions & Cool Effects --- */
+
+/* Buttons (navbar, form, filter, etc.) */
+button, .navbar-link, .form-btn, .filter-item button, .filter-select, .select-item button {
+  transition: background 0.3s cubic-bezier(0.4,0,0.2,1), color 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+button:hover, .navbar-link:hover, .form-btn:hover, .filter-item button:hover, .filter-select:hover, .select-item button:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+/* Card-like elements (project, blog, timeline, skills) */
+/* .content-card, .project-item, .blog-post-item, .timeline-item, .skills-item {
+  transition: box-shadow 0.4s var(--transition-2), transform 0.4s var(--transition-2), background 0.3s var(--transition-1);
+}
+
+.content-card:hover, .project-item.active:hover, .blog-post-item:hover, .skills-item:hover {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  transform: translateY(-4px) scale(1.03);
+  background: var(--bg-gradient-jet);
+} */
+
+/* Timeline item fade-in */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: timelineFadeIn 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes timelineFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Staggered animation for timeline items */
+.timeline-list .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-list .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-list .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+.timeline-list .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+
+/* Image hover zoom and smooth fade */
+img, .project-img img, .blog-banner-box img {
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), filter 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
+}
+img:hover, .project-img img:hover, .blog-banner-box img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  filter: brightness(1.08) saturate(1.2);
+  opacity: 0.95;
+}
+
+/* Social icons smooth color transition */
+.social-link {
+  transition: color 0.3s var(--transition-1), transform 0.2s;
+}
+.social-link:hover {
+  color: var(--orange-yellow-crayola);
+  transform: scale(1.2) rotate(-8deg);
+}
+
+/* Avatar box pop effect */
+.avatar-box img {
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.avatar-box img:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transform: scale(1.07) rotate(2deg);
+}
+
+/* Smooth fade for article switching */
+article {
+  transition: opacity 0.5s var(--transition-2), transform 0.5s var(--transition-2);
+}
+article:not(.active) {
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+}
+article.active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+/* Tool badges pop */
+.tool-badge {
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.tool-badge:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+/* Contact form input focus effect */
+.form-input {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-input:focus {
+  box-shadow: 0 0 0 2px var(--orange-yellow-crayola, #FFD86B);
+}
+
+/* End of custom transitions */
