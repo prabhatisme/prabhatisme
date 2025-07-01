@@ -6,14 +6,10 @@ Welcome to my personal portfolio website! This is a fully responsive site built 
 
 Check out the live site: [prabhatisme.github.io](https://prabhatisme.github.io/)
 
-![Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
-
 ## ✨ Features
 
 - Responsive design for all devices
 - Project and blog showcase
-- Downloadable resume/CV (if available)
 - Contact information
 - Clean, modern UI
 
