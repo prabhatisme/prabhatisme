@@ -1298,6 +1298,22 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 4px 10px;
   }
   .tools-group{ display: block;}
+ 
+  .project-list {
+      grid-template-columns: 1fr 1fr;
+      gap:15px;
+  }
+
+  .project-img{
+    height: 100px;
+  }
+  .project-title{
+    font-size: 12px;
+  }
+  .project-category{
+    font-size: 12px;
+  }
+  
 }
 
 /**
